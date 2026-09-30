@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>알비온 RPG</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>알비온 RPG</h1>
+        <div class="hud">
+            <div class="stat">
+                <span class="label">레벨:</span>
+                <span id="level">1</span>
+            </div>
+            <div class="stat">
+                <span class="label">HP:</span>
+                <span id="hp">100/100</span>
+            </div>
+            <div class="stat">
+                <span class="label">EXP:</span>
+                <span id="exp">0/100</span>
+            </div>
+            <div class="stat">
+                <span class="label">공격력:</span>
+                <span id="attack">10</span>
+            </div>
+            <div class="stat">
+                <span class="label">방어력:</span>
+                <span id="defense">5</span>
+            </div>
+            <div class="stat">
+                <span class="label">돈:</span>
+                <span id="money">0</span>G
+            </div>
+            <div class="stat">
+                <span class="label">탈것:</span>
+                <span id="mount">없음</span>
+            </div>
+        </div>
+        <canvas id="game-canvas" width="900" height="600"></canvas>
+        <div class="controls">
+            <div class="control-group">
+                <h3>조작법</h3>
+                <p>WASD / 방향키: 이동</p>
+                <p>Space: 공격</p>
+                <p>I: 인벤토리</p>
+                <p>B: 상점</p>
+                <p>M: 탈것 메뉴</p>
+            </div>
+            <div class="control-group" id="shop-menu" style="display: none;">
+                <h3>상점</h3>
+                <button id="buy-sword1">철검 (50G) - 공격+5</button>
+                <button id="buy-sword2">강철검 (150G) - 공격+12</button>
+                <button id="buy-sword3">미스릴검 (400G) - 공격+25</button>
+                <button id="buy-armor1">가죽 갑옷 (40G) - 방어+3</button>
+                <button id="buy-armor2">사슬 갑옷 (120G) - 방어+8</button>
+                <button id="buy-armor3">판금 갑옷 (300G) - 방어+15</button>
+                <button id="buy-potion">포션 (20G) - HP 50 회복</button>
+            </div>
+            <div class="control-group" id="mount-menu" style="display: none;">
+                <h3>탈것</h3>
+                <button id="buy-horse">말 (200G) - 속도+2</button>
+                <button id="buy-armored-horse">무장 말 (500G) - 속도+4</button>
+                <button id="buy-cart">마차 (1000G) - 속도+6</button>
+                <button id="dismount">탈것 내리기</button>
+            </div>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>

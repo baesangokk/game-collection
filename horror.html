@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>어둠의 복도 - 탈출</title>
+    <link rel="stylesheet" href="horror.css">
+</head>
+<body>
+    <div id="game-container"></div>
+
+    <!-- 비네트 & 피격효과 -->
+    <div id="vignette"></div>
+    <div id="jumpscare"><div class="eye left"></div><div class="eye right"></div></div>
+
+    <!-- HUD -->
+    <div id="hud">
+        <div id="bars">
+            <div class="bar-row">
+                <span class="bar-icon">🔋</span>
+                <div class="bar-bg"><div id="battery-bar" class="bar"></div></div>
+            </div>
+            <div class="bar-row">
+                <span class="bar-icon">💨</span>
+                <div class="bar-bg"><div id="stamina-bar" class="bar stamina"></div></div>
+            </div>
+        </div>
+        <div id="notes-hud">📜 수집: <span id="notes-count">0</span> / 5</div>
+        <div id="hint">F: 손전등 | Shift: 달리기</div>
+    </div>
+
+    <!-- 노트 내용 토스트 -->
+    <div id="toast"></div>
+
+    <!-- 시작 화면 -->
+    <div id="overlay">
+        <div id="overlay-box">
+            <h1>어둠의 복도</h1>
+            <p id="overlay-sub">폐허가 된 지하 미로 속, 당신은 혼자입니다.<br>노트 5장을 모아 탈출문을 여세요.<br>무언가가 당신을 쫓고 있습니다...</p>
+            <div class="controls-hint">
+                <p>WASD: 이동 | 마우스: 시선</p>
+                <p>Shift: 달리기 (스태미나 소모)</p>
+                <p>F: 손전등 (배터리 소모)</p>
+                <p>ESC: 일시정지</p>
+            </div>
+            <p id="warning">⚠️ 이어폰 착용 권장 | 갑작스러운 소리 주의</p>
+            <button id="start-btn">들어가기</button>
+        </div>
+    </div>
+
+    <!-- 게임 오버 -->
+    <div id="gameover" style="display:none">
+        <div id="gameover-box">
+            <h1>잡혔습니다</h1>
+            <p id="final-text"></p>
+            <button id="restart-btn">다시 시도</button>
+        </div>
+    </div>
+
+    <!-- 탈출 성공 -->
+    <div id="escaped" style="display:none">
+        <div id="escaped-box">
+            <h1>🚪 탈출 성공</h1>
+            <p id="win-text"></p>
+            <button id="again-btn">한 번 더</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="horror.js"></script>
+</body>
+</html>

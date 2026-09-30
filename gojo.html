@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>고죠 사토루 - 스킬셋</title>
+    <link rel="stylesheet" href="gojo.css">
+</head>
+<body>
+    <div class="container">
+        <h1>고죠 사토루</h1>
+        <p class="subtitle">최강의 주술사 | 무한의 주인</p>
+        
+        <div class="character-info">
+            <div class="portrait">
+                <canvas id="gojo-canvas" width="200" height="250"></canvas>
+            </div>
+            <div class="stats">
+                <div class="stat-row">
+                    <span class="stat-name">레벨</span>
+                    <span class="stat-value">특급</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-name">주력</span>
+                    <span class="stat-value">무한 (Infinity)</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-name">신체</span>
+                    <span class="stat-value">190cm / 80kg</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-name">소속</span>
+                    <span class="stat-value">도쿄 주술고등전문학교</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="skills-section">
+            <h2>주력 스킬</h2>
+            <div class="skills-grid">
+                <div class="skill-card" id="skill-infinity">
+                    <div class="skill-icon">∞</div>
+                    <h3>무한 (Infinity)</h3>
+                    <p class="skill-type">방어계 | 상시 발동</p>
+                    <p class="desc">아인슈타인의 원리처럼, 나에게 닿는 것들의 속도를 0에 수렴하게 만든다. 어떤 공격도 나를 닿을 수 없다.</p>
+                    <div class="skill-stats">
+                        <span>쿨다운: 없음</span>
+                        <span>마력: 상시 소모</span>
+                    </div>
+                </div>
+
+                <div class="skill-card" id="skill-blue">
+                    <div class="skill-icon blue">青</div>
+                    <h3>청 (Blue)</h3>
+                    <p class="skill-type">공격계 | 흡수</p>
+                    <p class="desc">음의 에너지를 다루는 기술. 주변의 물체를 강력한 흡인력으로 끌어당긴다. 적을 무력화하거나 아군을 구출할 수 있다.</p>
+                    <div class="skill-stats">
+                        <span>쿨다운: 5초</span>
+                        <span>마력: 중</span>
+                    </div>
+                </div>
+
+                <div class="skill-card" id="skill-red">
+                    <div class="skill-icon red">赤</div>
+                    <h3>적 (Red)</h3>
+                    <p class="skill-type">공격계 | 발사</p>
+                    <p class="desc">양의 에너지를 다루는 기술. 청의 역전으로, 강력한 충격파를 발사하여 적을 밀쳐내거나 파괴한다.</p>
+                    <div class="skill-stats">
+                        <span>쿨다운: 10초</span>
+                        <span>마력: 중상</span>
+                    </div>
+                </div>
+
+                <div class="skill-card" id="skill-purple">
+                    <div class="skill-icon purple">紫</div>
+                    <h3>보라 (Hollow Purple)</h3>
+                    <p class="skill-type">궁극기 | 복합</p>
+                    <p class="desc">청과 적을 합쳐 만든 가상의 존재. 엄청난 에너지가 직선으로 발사되어 닿는 모든 것을 소멸시킨다. 고죠의 최강 기술.</p>
+                    <div class="skill-stats">
+                        <span>쿨다운: 60초</span>
+                        <span>마력: 극대</span>
+                    </div>
+                </div>
+
+                <div class="skill-card" id="skill-reverse">
+                    <div class="skill-icon reverse">反</div>
+                    <h3>역 (Reversal)</h3>
+                    <p class="skill-type">회복계 | 치유</p>
+                    <p class="desc">주력의 역전 기술. 자신이나 아군의 상처를 치유한다. 죽음 직전의 상태도 되돌릴 수 있는 강력한 회복술.</p>
+                    <div class="skill-stats">
+                        <span>쿨다운: 30초</span>
+                        <span>마력: 상</span>
+                    </div>
+                </div>
+
+                <div class="skill-card" id="skill-sixeyes">
+                    <div class="skill-icon eyes">眼</div>
+                    <h3>六眼 (Six Eyes)</h3>
+                    <p class="skill-type">특수계 | 패시브</p>
+                    <p class="desc">마력을 극도로 정밀하게 볼 수 있는 눈. 상대의 주력 흐름을 읽고, 마력을 효율적으로 사용한다. 고죠의 강함의 핵심.</p>
+                    <div class="skill-stats">
+                        <span>쿨다운: 없음</span>
+                        <span>마력: 패시브</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="combo-section">
+            <h2>콤보 시스템</h2>
+            <div class="combo-list">
+                <div class="combo-item">
+                    <span class="combo-name">청 → 적</span>
+                    <span class="combo-desc">적을 끌어당긴 후 밀쳐내는 기본 콤보</span>
+                </div>
+                <div class="combo-item">
+                    <span class="combo-name">청 → 적 → 보라</span>
+                    <span class="combo-desc">적을 모은 후 보라로 일소하는 연계</span>
+                </div>
+                <div class="combo-item">
+                    <span class="combo-name">무한 → 역</span>
+                    <span class="combo-desc">방어 후 즉시 회복하는 생존 콤보</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2>스킬 데모</h2>
+            <canvas id="demo-canvas" width="800" height="400"></canvas>
+            <div class="demo-controls">
+                <button onclick="castSkill('blue')">청 (Blue)</button>
+                <button onclick="castSkill('red')">적 (Red)</button>
+                <button onclick="castSkill('purple')">보라 (Purple)</button>
+                <button onclick="castSkill('infinity')">무한 (Infinity)</button>
+                <button onclick="castSkill('reverse')">역 (Reversal)</button>
+            </div>
+        </div>
+    </div>
+    <script src="gojo.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>검 강화하기</title>
+    <link rel="stylesheet" href="enhance.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>⚔️ 검 강화하기 ⚔️</h1>
+        <p class="subtitle">최고 등급 검을 만들어보세요!</p>
+
+        <div class="hud">
+            <div class="stat">
+                <span class="label">💰 골드:</span>
+                <span id="gold">1000</span>G
+            </div>
+            <div class="stat">
+                <span class="label">🛡️ 보호권:</span>
+                <span id="scrolls">0</span>개
+            </div>
+            <div class="stat">
+                <span class="label">🔥 강화 시도:</span>
+                <span id="attempts">0</span>회
+            </div>
+            <div class="stat">
+                <span class="label">✅ 성공:</span>
+                <span id="successes">0</span>회
+            </div>
+            <div class="stat">
+                <span class="label">💥 파괴:</span>
+                <span id="destroyed">0</span>회
+            </div>
+        </div>
+
+        <div class="enhance-area">
+            <div class="sword-display">
+                <canvas id="sword-canvas" width="300" height="400"></canvas>
+                <div class="sword-name" id="sword-name">녹슨 검 +0</div>
+                <div class="sword-tier" id="sword-tier">티어: F</div>
+            </div>
+
+            <div class="enhance-panel">
+                <div class="info-box">
+                    <div class="info-row">
+                        <span>현재 강화:</span>
+                        <span id="current-level" class="highlight">+0</span>
+                    </div>
+                    <div class="info-row">
+                        <span>성공 확률:</span>
+                        <span id="success-rate" class="highlight">100%</span>
+                    </div>
+                    <div class="info-row">
+                        <span>파괴 확률:</span>
+                        <span id="destroy-rate" class="highlight danger">0%</span>
+                    </div>
+                    <div class="info-row">
+                        <span>강화 비용:</span>
+                        <span id="enhance-cost" class="highlight">100G</span>
+                    </div>
+                </div>
+
+                <label class="checkbox-label">
+                    <input type="checkbox" id="use-scroll"> 🛡️ 보호권 사용 (파괴 방지)
+                </label>
+
+                <button id="enhance-btn" class="enhance-button">🔨 강화하기</button>
+                <button id="buy-scroll-btn" class="scroll-button">🛡️ 보호권 구매 (500G)</button>
+                <button id="reset-btn" class="reset-button">🔄 검 다시 구매 (100G)</button>
+            </div>
+        </div>
+
+        <div class="log-section">
+            <h2>📜 강화 로그</h2>
+            <div id="log" class="log"></div>
+        </div>
+
+        <div class="tier-table">
+            <h2>🏆 강화 등급표</h2>
+            <div class="table-grid" id="tier-table"></div>
+        </div>
+    </div>
+
+    <div id="result-modal" class="modal">
+        <div class="modal-content">
+            <div id="modal-icon" class="modal-icon">🎉</div>
+            <div id="modal-title" class="modal-title">강화 성공!</div>
+            <div id="modal-text" class="modal-text"></div>
+            <button onclick="closeModal()">확인</button>
+        </div>
+    </div>
+
+    <script src="enhance.js"></script>
+</body>
+</html>
